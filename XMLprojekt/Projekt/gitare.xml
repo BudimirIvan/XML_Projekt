@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gitare>
+
+  <gitara>
+    <brand>Ibanez</brand>
+    <model>PIA</model>
+    <boja>CRNA</boja>
+  </gitara>
+ 
+
+ <gitara>
+    <brand>Gibson</brand>
+    <model>Les Paul</model>
+    <boja>TOBACCO BURST</boja>
+  </gitara>
+
+  <gitara>
+    <brand>Fender</brand>
+    <model>Stratocaster</model>
+    <boja>SUNBURST</boja>
+  </gitara>
+
+  <gitara>
+    <brand>ESP</brand>
+    <model>Snakebyte</model>
+    <boja>CRNA</boja>
+  </gitara>
+</gitare>

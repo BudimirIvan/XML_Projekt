@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+
+<script>
+
+$(document).ready(function(){
+
+  var xml;
+  $.get('gitare.xml', null, function (data, textStatus) {
+  xml=data;
+
+    $(xml).find('gitara:nth-child(1)').each( function(){
+
+      $('.main').append('<div class="card card1"></div>');
+      $('.card1').append('<img class="img-auto" src="pia.jpg"/>');
+      $('.card1').append('<div class="container container1"></div>');
+      $('.container1').append('<p class="model model1"></p>');
+      $('.container1').append('<p class="boja boja1"></p>');
+   
+
+      var brand = $(this).find('brand').text();
+      var model = $(this).find('model').text();
+      var boja = $(this).find('boja').text();
+
+      $(".model1").append(brand + ' ');
+      $(".model1").append(model);
+      $(".boja1").append(boja);
+
+    })
+
+  $(xml).find('gitara:nth-child(2)').each( function(){
+
+      $('.main').append('<div class="card card2"></div>');
+      $('.card2').append('<img class="img-auto" src="gibson.jpg"/>');
+      $('.card2').append('<div class="container container2"></div>');
+      $('.container2').append('<p class="model model2"></p>');
+      $('.container2').append('<p class="boja boja2"></p>');
+   
+
+      var brand = $(this).find('brand').text();
+      var model = $(this).find('model').text();
+      var boja = $(this).find('boja').text();
+
+      $(".model2").append(brand + ' ');
+      $(".model2").append(model);
+      $(".boja2").append(boja);
+
+    })
+
+  $(xml).find('gitara:nth-child(3)').each( function(){
+
+      $('.main').append('<div class="card card3"></div>');
+      $('.card3').append('<img class="img-auto" src="fender.jpg"/>');
+      $('.card3').append('<div class="container container3"></div>');
+      $('.container3').append('<p class="model model3"></p>');
+      $('.container3').append('<p class="boja boja3"></p>');
+   
+
+      var brand = $(this).find('brand').text();
+      var model = $(this).find('model').text();
+      var boja = $(this).find('boja').text();
+
+      $(".model3").append(brand + ' ');
+      $(".model3").append(model);
+      $(".boja3").append(boja);
+
+    })
+  $(xml).find('gitara:nth-child(4)').each( function(){
+
+      $('.main').append('<div class="card card4"></div>');
+      $('.card4').append('<img class="img-auto" src="esp.jpg"/>');
+      $('.card4').append('<div class="container container4"></div>');
+      $('.container4').append('<p class="model model4"></p>');
+      $('.container4').append('<p class="boja boja4"></p>');
+   
+
+      var brand = $(this).find('brand').text();
+      var model = $(this).find('model').text();
+      var boja = $(this).find('boja').text();
+
+      $(".model4").append(brand + ' ');
+      $(".model4").append(model);
+      $(".boja4").append(boja);
+
+    })
+
+
+  })
+});
+  
+
+</script>
+</head>
+<body class="row">
+<ul>
+  <li><p>Podaci povučeni iz dokumenta gitare.xml</p></li>
+</ul>
+<div class="main"></div>
+<!-- 
+  <div class="card">
+    <img src="pia.jpg" alt="Avatar" class="img-auto">
+    <div class="container">
+    <p class="model"></p>
+    <p class="boja"></p>
+  </div> -->
+
+</body>
+</html>

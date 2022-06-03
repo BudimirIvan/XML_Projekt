@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prijava</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+  
+
+<script>
+  $(document).ready(function(){
+  var xml;
+  $('.button').click(function(){
+       $.get('korisnici.xml', null, function (data, textStatus) {
+           xml=data;
+            $(xml).find('admin').each( function(){
+                var item = $(this);
+
+                if(item.find('username').text()==$('#username').val() && item.find('password').text()==$('#pass').val())
+                {
+                    window.open('home.html');
+                    location.reload();
+                }
+
+                else {
+                  document.getElementById("ide").innerHTML=" Korisničko ime ili lozinka nisu ispravni"; 
+                  var polje=document.getElementById("ide");
+                      polje.style.color="red";
+
+
+                }
+           });
+        });
+    });
+});
+</script>
+
+</head>
+<body class="login-body">
+
+<div class="login-form">
+  <h1>Prijava</h1>
+  <form method="post">
+    <div class="txt_field">
+      <input type="text" id="username" name="username" required>
+      <span></span>
+      <label>Korisničko Ime</label>
+    </div>
+    <div class="txt_field">
+      <input type="password" id="pass" name="password" required>
+      <span></span>
+      <label>Lozinka</label>
+    </div>
+    <p id="ide"></p>
+    <input type="button" value="Prijava" class="button">
+  </form>
+</div>
+
+</body>
+</html>
+

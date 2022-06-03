@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Administratori>
+
+  <admin>
+    <username>korisnik1</username>
+    <password>12345678</password>
+  </admin>
+
+  <admin>
+    <username>korisnik2</username>
+    <password>korisnik2</password>
+  </admin>
+
+  <admin>
+    <username>korisnik3</username>
+    <password>tvzvrbik</password>
+  </admin>
+
+  <admin>
+    <username>ivan</username>
+    <password>ivan12.</password>
+  </admin>
+
+
+</Administratori>
